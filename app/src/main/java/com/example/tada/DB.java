@@ -45,7 +45,7 @@ public class DB extends SQLiteOpenHelper {
 
     //insert rec into Database
     public String insertRecIntoDB(String date, String name, String travel, String lunch, String instru, String paid) {
-        String q1="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+") VALUES "+" ("+date+", '"+name+"', "+travel+", "+lunch+", "+instru+", '"+paid+"');";
+        String q1="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+") VALUES "+" ('"+date+"', '"+name+"', "+travel+", "+lunch+", "+instru+", '"+paid+"');";
         Log.v("sql1",q1);
 
         try {

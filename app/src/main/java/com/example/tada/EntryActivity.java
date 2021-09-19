@@ -44,6 +44,7 @@ public class EntryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
 
+
         //assign value
         date=findViewById(R.id.etDate);
         name=findViewById(R.id.etName);

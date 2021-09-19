@@ -29,13 +29,6 @@ public class HistoryActivity extends AppCompatActivity {
         ArrayList<String> instrument=new ArrayList<String>(0);
         ArrayList<Boolean> paid=new ArrayList<Boolean>(0);
 
-        date.add("43/12/21");
-        name.add("Mx");
-        travel.add("323");
-        lunch.add("122");
-        instrument.add("612");
-        paid.add(true);
-
         //initial database
         DB db=new DB(HistoryActivity.this);
         Cursor cursor=db.getHistoryFromDB();
