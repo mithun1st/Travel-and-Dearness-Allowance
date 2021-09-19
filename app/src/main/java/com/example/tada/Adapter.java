@@ -63,7 +63,7 @@ public class Adapter extends BaseAdapter {
         TextView c6=v.findViewById(R.id.tmTotal);
         CheckBox c7=v.findViewById(R.id.tmSwitch);
 
-        //setdata
+        //setData
         c1.setText(date.get(i));
         c2.setText(name.get(i));
         c3.setText(travel.get(i));

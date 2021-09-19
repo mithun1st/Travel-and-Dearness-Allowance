@@ -2,6 +2,7 @@ package com.example.tada;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -20,6 +21,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         lv=findViewById(R.id.listViewId);
 
+        //initial Arraylist
         ArrayList<String> date=new ArrayList<String>(0);
         ArrayList<String> name=new ArrayList<String>(0);
         ArrayList<String> travel=new ArrayList<String>(0);
@@ -32,14 +34,21 @@ public class HistoryActivity extends AppCompatActivity {
         travel.add("323");
         lunch.add("122");
         instrument.add("612");
-        paid.add(false);
-
-        date.add("0/2");
-        name.add("Y");
-        travel.add("300");
-        lunch.add("100");
-        instrument.add("700");
         paid.add(true);
+
+        //initial database
+        DB db=new DB(HistoryActivity.this);
+        Cursor cursor=db.getHistoryFromDB();
+
+        //assign data
+        while (cursor.moveToNext()){
+            date.add(cursor.getString(0));
+            name.add(cursor.getString(1));
+            travel.add(cursor.getString(2));
+            lunch.add(cursor.getString(3));
+            instrument.add(cursor.getString(4));
+            paid.add(cursor.getString(5).matches("Paid") ? true : false);
+        }
 
         Adapter adapter =new Adapter(HistoryActivity.this,date,name,travel,lunch,instrument,paid);
         lv.setAdapter(adapter);
