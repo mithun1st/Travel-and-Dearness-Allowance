@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EntryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#D9FFFC"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TADA ENTRY"
+            android:typeface="serif"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Date:"/>
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:inputType="date"
+                android:hint="Date/Month/Year"/>
+        </RelativeLayout>
+<!--        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Employee Name:"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/etName"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:inputType="textCapWords"
+                android:hint="Enter Date"/>
+        </RelativeLayout>
+<!--        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Travel Cost:"/>
+            <EditText
+                android:id="@+id/etTravel"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:inputType="numberDecimal"
+                android:hint="Input Cost"/>
+        </RelativeLayout>
+<!--        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Lunch Cost:"/>
+            <EditText
+                android:id="@+id/etLunch"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:inputType="numberDecimal"
+                android:hint="Input Cost"/>
+        </RelativeLayout>
+<!--        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Instrument Cost:"/>
+            <EditText
+                android:id="@+id/etInstrument"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:inputType="numberDecimal"
+                android:hint="Input Cost"/>
+        </RelativeLayout>
+<!--        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#F3F9FF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Paid:"/>
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="#fff"
+                android:gravity="center">
+                <Spinner
+                    android:id="@+id/etPaid"
+                    android:layout_width="220dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+<!--        -->
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Submit"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
